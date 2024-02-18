@@ -1,0 +1,304 @@
+2024-02-04 11:15:43.566 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 11:15:43.643 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 11:15:43.647 -05:00 [INF] Hosting environment: Development
+2024-02-04 11:15:43.650 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 11:15:47.834 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 11:15:48.238 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 200 null text/html;charset=utf-8 409.4413ms
+2024-02-04 11:15:48.257 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 11:15:48.280 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 11:15:48.288 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 7.9974ms
+2024-02-04 11:15:48.340 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.7982ms
+2024-02-04 11:15:48.452 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - null null
+2024-02-04 11:15:48.468 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-04 11:15:48.663 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 210.7632ms
+2024-02-04 11:15:52.825 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 11:15:52.856 -05:00 [INF] Executing endpoint 'HTTP: GET /articulos'
+2024-02-04 11:15:55.489 -05:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductCode], [p].[ProductDescripcion]
+FROM [DBO].[Products] AS [p]
+2024-02-04 11:15:55.583 -05:00 [INF] Executed endpoint 'HTTP: GET /articulos'
+2024-02-04 11:15:55.602 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 200 null application/json; charset=utf-8 2777.4328ms
+2024-02-04 12:26:53.085 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 12:26:53.132 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 12:26:53.133 -05:00 [INF] Hosting environment: Development
+2024-02-04 12:26:53.140 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 12:26:53.514 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 12:26:53.735 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Failure to infer one or more parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+seguridadApp        | Body (Inferred)
+request             | UNKNOWN        
+
+
+Did you mean to register the "UNKNOWN" parameters as a Service?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-04 12:26:53.799 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 500 null text/html; charset=utf-8 292.7485ms
+2024-02-04 12:26:53.850 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 12:26:53.850 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 12:26:53.858 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 8.8399ms
+2024-02-04 12:26:53.918 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.6488ms
+2024-02-04 12:26:54.051 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/favicon.ico - null null
+2024-02-04 12:26:54.061 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Failure to infer one or more parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+seguridadApp        | Body (Inferred)
+request             | UNKNOWN        
+
+
+Did you mean to register the "UNKNOWN" parameters as a Service?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-04 12:26:54.150 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/favicon.ico - 500 null text/plain; charset=utf-8 99.0596ms
+2024-02-04 12:29:26.900 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 12:29:26.958 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 12:29:26.961 -05:00 [INF] Hosting environment: Development
+2024-02-04 12:29:26.963 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 12:29:34.187 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 12:29:34.839 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 200 null text/html;charset=utf-8 662.3643ms
+2024-02-04 12:29:34.868 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 12:29:34.878 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 12:29:34.885 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 16.8373ms
+2024-02-04 12:29:34.976 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.4824ms
+2024-02-04 12:29:35.138 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - null null
+2024-02-04 12:29:35.160 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-04 12:29:35.449 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 319.3972ms
+2024-02-04 12:29:50.812 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5236/auth - application/json 49
+2024-02-04 12:29:50.829 -05:00 [INF] Executing endpoint 'HTTP: POST /auth'
+2024-02-04 12:29:54.371 -05:00 [INF] Setting HTTP status code 400.
+2024-02-04 12:29:54.376 -05:00 [INF] Writing value of type 'String' as Json.
+2024-02-04 12:29:54.382 -05:00 [INF] Executed endpoint 'HTTP: POST /auth'
+2024-02-04 12:29:54.386 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5236/auth - 400 null application/json; charset=utf-8 3574.2973ms
+2024-02-04 12:30:08.774 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5236/auth - application/json 50
+2024-02-04 12:30:08.780 -05:00 [INF] Executing endpoint 'HTTP: POST /auth'
+2024-02-04 12:31:00.139 -05:00 [INF] Setting HTTP status code 200.
+2024-02-04 12:31:00.154 -05:00 [INF] Writing value of type 'UserAutenticateResponse' as Json.
+2024-02-04 12:31:00.159 -05:00 [INF] Executed endpoint 'HTTP: POST /auth'
+2024-02-04 12:31:00.161 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5236/auth - 200 null application/json; charset=utf-8 51386.8419ms
+2024-02-04 12:38:28.811 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 12:38:28.892 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 12:38:28.904 -05:00 [INF] Hosting environment: Development
+2024-02-04 12:38:28.906 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 12:38:29.346 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 12:38:29.870 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 200 null text/html;charset=utf-8 527.1413ms
+2024-02-04 12:38:29.887 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 12:38:29.888 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 12:38:29.911 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 24.894ms
+2024-02-04 12:38:29.994 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.068ms
+2024-02-04 12:38:30.087 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - null null
+2024-02-04 12:38:30.105 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-04 12:38:30.306 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 219.1539ms
+2024-02-04 12:38:35.059 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 12:38:35.068 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint HTTP: GET /articulos contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseAuthorization() must go between them.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-04 12:38:35.086 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 500 null text/plain; charset=utf-8 26.6251ms
+2024-02-04 12:47:41.186 -05:00 [INF] User profile is available. Using 'C:\Users\Miguelon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-04 12:47:42.100 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 12:47:42.107 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 12:47:42.110 -05:00 [INF] Hosting environment: Development
+2024-02-04 12:47:42.111 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 12:47:48.677 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 12:47:49.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 200 null text/html;charset=utf-8 490.2035ms
+2024-02-04 12:47:49.178 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 12:47:49.181 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 12:47:49.191 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 12.7284ms
+2024-02-04 12:47:49.290 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.1403ms
+2024-02-04 12:47:49.422 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - null null
+2024-02-04 12:47:49.439 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-04 12:47:49.632 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 209.703ms
+2024-02-04 12:48:04.111 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 12:48:05.174 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-04 12:48:05.178 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-04 12:48:05.180 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 401 0 null 1069.2913ms
+2024-02-04 12:48:50.195 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 12:48:50.210 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-04 12:48:50.213 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-04 12:48:50.221 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 401 0 null 26.8888ms
+2024-02-04 12:49:37.948 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 12:49:37.955 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-04 12:49:37.959 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-04 12:49:37.961 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 401 0 null 13.8023ms
+2024-02-04 12:49:57.559 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5236/auth - application/json 50
+2024-02-04 12:49:57.578 -05:00 [INF] Executing endpoint 'HTTP: POST /auth'
+2024-02-04 12:49:59.687 -05:00 [INF] Setting HTTP status code 200.
+2024-02-04 12:49:59.690 -05:00 [INF] Writing value of type 'UserAutenticateResponse' as Json.
+2024-02-04 12:49:59.694 -05:00 [INF] Executed endpoint 'HTTP: POST /auth'
+2024-02-04 12:49:59.697 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5236/auth - 200 null application/json; charset=utf-8 2138.7738ms
+2024-02-04 12:50:45.440 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 12:50:45.964 -05:00 [INF] Executing endpoint 'HTTP: GET /articulos'
+2024-02-04 12:50:48.585 -05:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductCode], [p].[ProductDescripcion]
+FROM [DBO].[Products] AS [p]
+2024-02-04 12:50:48.699 -05:00 [INF] Executed endpoint 'HTTP: GET /articulos'
+2024-02-04 12:50:48.718 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 200 null application/json; charset=utf-8 3278.9275ms
+2024-02-04 12:51:03.723 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 12:51:03.738 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.Text.Json.JsonReaderException: '0xC8' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at Microsoft.IdentityModel.Tokens.Json.JsonSerializerPrimitives.IsReaderAtTokenType(Utf8JsonReader& reader, JsonTokenType tokenType, Boolean advanceReader)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateHeaderClaimSet(Byte[] bytes, Int32 length)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.Decode[T](String input, Int32 offset, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(String rawString, Int32 startIndex, Int32 length, Func`3 action)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2024-02-04 12:51:03.781 -05:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-02-04 12:51:03.791 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-04 12:51:03.798 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-04 12:51:03.800 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 401 0 null 76.6571ms
+2024-02-04 12:51:10.076 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/articulos - null null
+2024-02-04 12:51:10.081 -05:00 [INF] Executing endpoint 'HTTP: GET /articulos'
+2024-02-04 12:51:10.166 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductCode], [p].[ProductDescripcion]
+FROM [DBO].[Products] AS [p]
+2024-02-04 12:51:10.172 -05:00 [INF] Executed endpoint 'HTTP: GET /articulos'
+2024-02-04 12:51:10.175 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/articulos - 200 null application/json; charset=utf-8 98.5143ms
+2024-02-04 13:19:40.228 -05:00 [INF] User profile is available. Using 'C:\Users\Miguelon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-04 13:19:40.674 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 13:19:40.678 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 13:19:40.680 -05:00 [INF] Hosting environment: Development
+2024-02-04 13:19:40.681 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 13:19:49.056 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 13:19:49.465 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 200 null text/html;charset=utf-8 418.2458ms
+2024-02-04 13:19:49.497 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 13:19:49.506 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 13:19:49.582 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 74.9179ms
+2024-02-04 13:19:49.649 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 152.9041ms
+2024-02-04 13:19:49.829 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - null null
+2024-02-04 13:19:49.858 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-04 13:19:50.140 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 311.7847ms
+2024-02-04 13:20:01.865 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5236/auth - application/json 49
+2024-02-04 13:20:01.950 -05:00 [INF] Executing endpoint 'HTTP: POST /auth'
+2024-02-04 13:20:08.449 -05:00 [INF] Executed DbCommand (58ms) [Parameters=[@__username_0='?' (Size = 250), @__clave_1='?' (Size = 250)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[UserName], [u].[UserPassword], [u].[UserRol]
+FROM [DBO].[User] AS [u]
+WHERE [u].[UserName] = @__username_0 AND [u].[UserPassword] = @__clave_1
+2024-02-04 13:20:11.669 -05:00 [INF] Setting HTTP status code 400.
+2024-02-04 13:20:11.673 -05:00 [INF] Writing value of type 'String' as Json.
+2024-02-04 13:20:11.679 -05:00 [INF] Executed endpoint 'HTTP: POST /auth'
+2024-02-04 13:20:11.698 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5236/auth - 400 null application/json; charset=utf-8 9833.1244ms
+2024-02-04 13:20:23.431 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5236/auth - application/json 49
+2024-02-04 13:20:23.436 -05:00 [INF] Executing endpoint 'HTTP: POST /auth'
+2024-02-04 13:20:29.257 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 250), @__clave_1='?' (Size = 250)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[UserName], [u].[UserPassword], [u].[UserRol]
+FROM [DBO].[User] AS [u]
+WHERE [u].[UserName] = @__username_0 AND [u].[UserPassword] = @__clave_1
+2024-02-04 13:20:35.949 -05:00 [INF] Setting HTTP status code 200.
+2024-02-04 13:20:35.951 -05:00 [INF] Writing value of type 'UserAutenticateResponse' as Json.
+2024-02-04 13:20:35.954 -05:00 [INF] Executed endpoint 'HTTP: POST /auth'
+2024-02-04 13:20:35.956 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5236/auth - 200 null application/json; charset=utf-8 12525.0604ms
+2024-02-04 13:33:02.349 -05:00 [INF] User profile is available. Using 'C:\Users\Miguelon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-04 13:33:02.764 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 13:33:02.768 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 13:33:02.770 -05:00 [INF] Hosting environment: Development
+2024-02-04 13:33:02.771 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 13:33:07.107 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 13:33:07.415 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 200 null text/html;charset=utf-8 312.0572ms
+2024-02-04 13:33:07.425 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 13:33:07.428 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 13:33:07.437 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 12.3315ms
+2024-02-04 13:33:07.527 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.9136ms
+2024-02-04 13:33:07.680 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - null null
+2024-02-04 13:33:07.693 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-04 13:33:07.886 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.4956ms
+2024-02-04 13:58:14.697 -05:00 [INF] User profile is available. Using 'C:\Users\Miguelon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-04 13:58:15.115 -05:00 [INF] Now listening on: http://localhost:5236
+2024-02-04 13:58:15.119 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-04 13:58:15.121 -05:00 [INF] Hosting environment: Development
+2024-02-04 13:58:15.123 -05:00 [INF] Content root path: D:\VIsualStudio\2022\Galaxy\Sample\Sol.Galaxy\Sol.Galaxy.MinimalApi
+2024-02-04 13:58:19.219 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/index.html - null null
+2024-02-04 13:58:19.827 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/index.html - 200 null text/html;charset=utf-8 626.6514ms
+2024-02-04 13:58:19.854 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-04 13:58:19.856 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/_vs/browserLink - null null
+2024-02-04 13:58:19.868 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 14.228ms
+2024-02-04 13:58:19.946 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.7759ms
+2024-02-04 13:58:20.096 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - null null
+2024-02-04 13:58:20.117 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-02-04 13:58:20.310 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 214.1303ms
+2024-02-04 13:58:25.935 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/comprobantes - null null
+2024-02-04 13:58:26.026 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-04 13:58:26.030 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-04 13:58:26.032 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/comprobantes - 401 0 null 97.1026ms
+2024-02-04 13:58:51.718 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5236/auth - application/json 49
+2024-02-04 13:58:51.728 -05:00 [INF] Executing endpoint 'HTTP: POST /auth'
+2024-02-04 13:58:53.218 -05:00 [INF] Executed DbCommand (30ms) [Parameters=[@__username_0='?' (Size = 250), @__clave_1='?' (Size = 250)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[UserName], [u].[UserPassword], [u].[UserRol]
+FROM [DBO].[User] AS [u]
+WHERE [u].[UserName] = @__username_0 AND [u].[UserPassword] = @__clave_1
+2024-02-04 13:58:53.384 -05:00 [INF] Setting HTTP status code 200.
+2024-02-04 13:58:53.386 -05:00 [INF] Writing value of type 'UserAutenticateResponse' as Json.
+2024-02-04 13:58:53.389 -05:00 [INF] Executed endpoint 'HTTP: POST /auth'
+2024-02-04 13:58:53.413 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5236/auth - 200 null application/json; charset=utf-8 1695.2042ms
+2024-02-04 13:59:28.489 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/comprobantes - null null
+2024-02-04 13:59:28.559 -05:00 [INF] Executing endpoint 'HTTP: GET /comprobantes'
+2024-02-04 13:59:41.353 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Amount], [i].[CustomerId], [i].[InvoiceDate]
+FROM [DBO].[Invoice] AS [i]
+2024-02-04 14:00:21.566 -05:00 [INF] Executed endpoint 'HTTP: GET /comprobantes'
+2024-02-04 14:00:21.639 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5236/comprobantes - 200 null application/json; charset=utf-8 53150.0507ms
+2024-02-04 14:00:28.114 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5236/comprobantes - null null
+2024-02-04 14:00:28.120 -05:00 [INF] Executing endpoint 'HTTP: GET /comprobantes'
+2024-02-04 14:00:32.702 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[Amount], [i].[CustomerId], [i].[InvoiceDate]
+FROM [DBO].[Invoice] AS [i]
